@@ -1,0 +1,30 @@
+GET /iplant/index.php?table=user HTTP/1.1
+Host: localhost
+
+###
+
+POST /iplant/index.php?table=user HTTP/1.1
+Host: localhost
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 21
+
+email=a.b%40email.com
+
+###
+
+PUT /iplant/index.php?table=user&id=5&email=updatedAgain@email.com HTTP/1.1
+Host: localhost
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 30
+
+email=updated%40email.com&id=5
+
+###
+
+DELETE /iplant/index.php?table=user&id=5 HTTP/1.1
+Host: localhost
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 30
+
+email=updated%40email.com&id=5
+
