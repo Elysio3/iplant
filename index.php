@@ -5,12 +5,15 @@
 $request_method = $_SERVER["REQUEST_METHOD"];
 $config = include 'config.php';
 
+
+
 if(!isset($_SERVER['PHP_AUTH_USER']) || !isset($_SERVER['PHP_AUTH_PW']) || !isset($_GET['table'])) {
     header("HTTP/1.1 401 Unauthorized");
 } else {
     if(!$_SERVER['PHP_AUTH_USER'] == $config['api-call-username'] && $_SERVER['PHP_AUTH_PW'] == $config['api-call-key']) {
         header("HTTP/1.1 400 Bad Request");
     } else {
+
         include_once "iplant/user.php";
         include_once "iplant/location.php";
         include_once "iplant/plant.php";
@@ -36,11 +39,10 @@ switch($request_method) {
 
     case 'GET':
         // get
+        $function = "get".$_GET['table'];
         if(isset($_GET['id'])) {
-            $function = "get".$_GET['table']."s";
             $function($_GET['id']);
         } else {
-            $function = "get".$_GET['table'];
             $function();
         }
         break;
@@ -64,3 +66,4 @@ switch($request_method) {
         }
         break;
 }
+
