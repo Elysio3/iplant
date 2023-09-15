@@ -111,7 +111,7 @@ bool sendPostRequest(String payload) {
     // Send POST request
     client.beginRequest();
     client.post(SECRET_ENDPOINT);
-    client.sendHeader("Authorization", "Basic aXBsYW50OjU0NjVjNTY0LWU3MTItNGI5MC1hNDdhLTRhZjkxMzFhMzBmOS1wcml2YXRlLWlwbGFudA==");
+    client.sendHeader("Authorization", "Basic secret");
     client.sendHeader("Content-Type", "application/x-www-form-urlencoded");
     client.sendHeader("Content-Length", payload.length());
     client.beginBody();
