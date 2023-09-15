@@ -4,7 +4,7 @@ function getRecord($id=0): void {
     global $conn;
     $query = "SELECT * FROM record";
     if($id != 0) {
-        $query .= " WHERE id=".$id." LIMIT 1";
+        $query .= " WHERE id_plant=".$id;
     }
     $response = array();
     $result = mysqli_query($conn, $query);
@@ -17,14 +17,13 @@ function getRecord($id=0): void {
 
 function addRecord(): void {
     global $conn;
-    $date = $_POST['date'];
     $id_plant = $_POST['id_plant'];
     $temperature = $_POST['temperature'];
-    $moisture = $_POST['moisture'];
+    $humidity = $_POST['humidity'];
     $luminosity = $_POST['luminosity'];
 
-    if($date != null || $id_plant != null || $temperature != null || $moisture != null || $luminosity != null) {
-        $query="INSERT INTO record (date, id_plant, temperature, moisture, luminosity) VALUES ('".$date."', '".$id_plant."', '".$temperature."', '".$moisture."', '".$luminosity."')";
+    if($id_plant != null || $temperature != null || $humidity != null || $luminosity != null) {
+        $query="INSERT INTO record (date, id_plant, temperature, humidity, luminosity) VALUES (CURRENT_TIMESTAMP, ".$id_plant.", '".$temperature."', '".$humidity."', '".$luminosity."')";
         if(mysqli_query($conn, $query)) {
             $response=array(
                 'status' => 1,
@@ -55,12 +54,12 @@ function updateRecord($id): void {
     $date = $_POST['date'];
     $id_plant = $_POST['id_plant'];
     $temperature = $_POST['temperature'];
-    $moisture = $_POST['moisture'];
+    $humidity = $_POST['humidity'];
     $luminosity = $_POST['luminosity'];
 
-    if($date != null || $id_plant != null || $temperature != null || $moisture != null || $luminosity != null) {
+    if($date != null || $id_plant != null || $temperature != null || $humidity != null || $luminosity != null) {
         $query="UPDATE location SET" .
-        "date='".$date. "', id_plant='".$id_plant. "', temperature='".$temperature. "', moisture='".$moisture. "', luminosity='".$luminosity.
+        "date='".$date. "', id_plant='".$id_plant. "', temperature='".$temperature. "', humidity='".$humidity. "', luminosity='".$luminosity.
             "' WHERE id=".$id;
 
         if(mysqli_query($conn, $query)) {

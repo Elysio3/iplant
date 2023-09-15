@@ -1,3 +1,4 @@
+# @no-redirect
 GET /iplant/index.php?table=user HTTP/1.1
 Host: localhost
 
