@@ -1,12 +1,30 @@
-# Master MSDD - IPlant IoT System
+# IPlant
+![Logo](https://cdn.discordapp.com/attachments/1040167723080097832/1148550013237080096/ORT-SABRI-MAEL-LOGO-01.png)
+
+
+# Faciliter la vie des Professionnels 👋
+
+IPlant est un projet d'études réalisé en groupe. Il définit la conception d'un système permettant aux Professionnels de gérer à distance et aisément leurs espaces vert.
+
+Notre solution se base sur la puissance d'une conception Arduino munie de capteurs et dialoguant avec une base de données. L'utilisateur a la possibilité d'accéder à ces données depuis une application Android.
+
+## Documentation
+
+[Documentation](https://github.com/Elysio3/iplant/tree/Documentation)
+
+[Arduino Nano](https://github.com/Elysio3/iplant/tree/Documentation/arduino)
+
+[Android](https://github.com/Elysio3/iplant/tree/Documentation/android)
+
+[API REST & BDD](https://github.com/Elysio3/iplant/tree/Documentation/API%20%26%20BDD)
+
+---
+
+## 📋 Informations Projet
 
 **Période**: 2023  
 **Niveau**: Master MSDD - Manager de Solutions Digitales et Data  
 **Type**: Système IoT de gestion de plantes avec capteurs Arduino et application Android
-
-## 📋 Description du Projet
-
-IPlant est un système IoT complet de monitoring et gestion de plantes développé dans le cadre du Master MSDD. Le système utilise des capteurs Arduino pour collecter des données environnementales et une application Android pour le monitoring à distance.
 
 ## 🛠️ Technologies Utilisées
 
@@ -28,20 +46,6 @@ IPlant est un système IoT complet de monitoring et gestion de plantes développ
 - **Historique des données** et analytics
 - **Contrôle à distance** des systèmes d'arrosage
 - **Machine Learning** pour prédiction des besoins
-
-## 📁 Structure du Projet
-
-```
-iplant/
-├── arduino/            # Code Arduino pour capteurs
-├── backend/            # API Java Spring Boot
-├── mobile/             # Application Android
-├── dashboard/          # Interface web React
-├── database/           # Scripts et migrations
-├── cloud/              # Configuration AWS IoT
-├── docs/               # Documentation technique
-└── README.md           # Documentation
-```
 
 ## 🚀 Installation et Utilisation
 
@@ -83,10 +87,6 @@ iplant/
 - Gestion de projets complexes
 - Architecture microservices
 
-## 🎓 Contexte Éducatif
-
-Ce projet du Master MSDD démontre la maîtrise des technologies IoT modernes et de l'intégration de systèmes complexes.
-
 ## 🏗️ Architecture IoT
 
 - **Capteurs Arduino** → **Gateway** → **Cloud** → **Applications**
@@ -103,17 +103,8 @@ Ce projet du Master MSDD démontre la maîtrise des technologies IoT modernes et
 - **Protection** contre les attaques IoT
 - **Audit** des accès et données
 
-## 📸 Captures d'écran
-
-*[À ajouter: captures d'écran du système]*
-
-## 🔗 Liens
-
-- **Repository**: https://github.com/Elysio3/iplant
-- **Portfolio**: [Lien vers le portfolio principal]
-
 ---
 
-**Développé par**: Maël KERVICHE  
+**Développé par**: Maël KERVICHE (équipe projet)  
 **École**: ORT Toulouse-Colomiers  
 **Année**: 2023
